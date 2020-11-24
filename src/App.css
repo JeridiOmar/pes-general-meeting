@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+html, body {
+    height: 100%;
+    /*font-family: 'Montserrat', sans-serif !important;*/
+    font-family: 'Roboto', sans-serif !important;
+
+}
+footer {
+    /*background: rgb(32,37,31);*/
+    /*background: linear-gradient(0deg, rgba(32,37,31,1) 1%, rgba(59,109,50,1) 13%, rgba(255,255,255,1) 61%);*/
+    background-color: #538d22;
+    /*clip-path: polygon(49% 0, 100% 19%, 100% 60%, 100% 100%, 0 100%, 0% 60%, 0 25%);*/
+    /*margin-top: 50px;*/
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer-top {
+    /*padding-top: 60px;*/
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+footer i {
+    font-size: 20px;
+    padding: 6px;
+    color: #1b1e21;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.footer-right p {
+
+
+    font-size: 11px;
 }
 
-.App-link {
-  color: #61dafb;
+@media (min-width: 750px) {
+
+    .logo-footer {
+        margin-top: 20px;
+    }
+
+    .footer-right {
+        padding-top: 60px;
+        padding-bottom: 15px;
+    }
+
+    .footer-left {
+        padding-top: 15px;
+        padding-left: 50px;
+        padding-bottom: 15px;
+        padding-right: 50px !important;
+    }
+
+    .footer-top {
+
+        padding-bottom: 20px;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+footer p {
+    color: #f2e8cf;
+    font-size: 14px;
 }
+
+@media (max-width: 750px) {
+    /*
+    carousel caption
+     */
+    .carousel-caption-home h1 {
+        font-size: 20px;
+    }
+
+    .carousel-caption-home h3 {
+        font-size: 15px;
+    }
+
+    /* card responsive changes*/
+    .card-wrapper {
+        margin-bottom: 5px;
+        padding: 5px;
+
+    }
+
+    /* footer responsive changes*/
+    .footer-top {
+        /*justify-content: center;*/
+        /*text-align: center;*/
+        display: inline-block !important;
+    }
+
+    footer {
+        /*clip-path: polygon(50% 0, 99% 10%, 100% 60%, 100% 100%, 0 100%, 0% 60%, 0 12%);*/
+    }
+
+    .footer-top {
+        padding-top: 50px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+    }
+
+
+    /* carousel caption */
+    .absolute-div {
+        width: 90%;
+        position: absolute;
+        top: 40%;
+        left: 20px;
+        right: 60%;
+        bottom: 0px;
+    }
+
+    .banner {
+        /*clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 93%, 55% 100%, 0 92%) !important;*/
+    }
+
+    .carousel-resp {
+        /*clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 93%, 55% 100%, 0 92%) !important;*/
+    }
+}
+
