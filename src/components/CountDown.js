@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import {css, jsx} from '@emotion/react'
+import {css} from '@emotion/react'
 /** @jsxImportSource @emotion/react */
 class Countdown extends React.Component {
     state = {

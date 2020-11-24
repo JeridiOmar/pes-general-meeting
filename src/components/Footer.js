@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../pictures/logo-white.png";
 
-import {css, jsx} from '@emotion/react'
+import {css} from '@emotion/react'
 import "../App.css"
 /** @jsxImportSource @emotion/react */
 const Footer = () => {
