@@ -1,10 +1,10 @@
-import React, { useEffect, useState} from "react";
-import ReactDOM from "react-dom";
+import React from "react";
+
 import Carousel from "react-multi-carousel";
 import 'react-multi-carousel/lib/styles.css';
 
 import ConfCard from "./ConfCard";
-import {css, jsx} from '@emotion/react'
+import {css} from '@emotion/react'
 /** @jsxImportSource @emotion/react */
 
 const ConferencesCarousel=()=>{

@@ -1,7 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
-import {css, jsx} from '@emotion/react'
+
+import {css} from '@emotion/react'
 import Fade from 'react-reveal/Fade';
 import banner2 from "../pictures/banner1.webp"
 import Jump from "react-reveal/Jump";
@@ -17,7 +17,7 @@ import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import ConferencesCarousel from "./ConferencesCarousel";
-import ConfCard from "./ConfCard";
+
 import AwardCard from "./AwardCard";
 import Footer from "./Footer";
 
@@ -133,39 +133,39 @@ const Gm = () => {
     }
     }
   `;
-    const titleStyle = css`
-    //text-decoration:  underline overline;
-    font-weight: bold;
-    padding: 5px;
-    position: relative;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    color: #212529;
-    &::before {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 250px;
-    height: 1px;
-    background: white;
-    bottom: 1%;
-    //bottom: 90px;
-    left: calc(50% - 125px);
-}
-
-&::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 40px;
-    height: 3px;
-    background: #2e911f;
-   bottom:0%;
-    left: calc(50% - 20px);
-}
-
-
-     `;
+//     const titleStyle = css`
+//     //text-decoration:  underline overline;
+//     font-weight: bold;
+//     padding: 5px;
+//     position: relative;
+//     margin-bottom: 30px;
+//     margin-top: 30px;
+//     color: #212529;
+//     &::before {
+//     content: '';
+//     position: absolute;
+//     display: block;
+//     width: 250px;
+//     height: 1px;
+//     background: white;
+//     bottom: 1%;
+//     //bottom: 90px;
+//     left: calc(50% - 125px);
+// }
+//
+// &::after {
+//     content: '';
+//     position: absolute;
+//     display: block;
+//     width: 40px;
+//     height: 3px;
+//     background: #2e911f;
+//    bottom:0%;
+//     left: calc(50% - 20px);
+// }
+//
+//
+//      `;
     const aboutStyle = css`
     & h2{
         display: inline-block;
