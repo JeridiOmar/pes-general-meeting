@@ -12,9 +12,11 @@ import 'react-vertical-timeline-component/style.min.css';
 import background from "../pictures/background.jpg"
 import awardBackground from "../pictures/award-backgroundjpg.jpg"
 import "bootstrap/dist/css/bootstrap.min.css"
-
+import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 import ConferencesCarousel from "./ConferencesCarousel";
-
+import VideocamIcon from '@material-ui/icons/Videocam';
+import GroupWorkIcon from '@material-ui/icons/GroupWork';
 import AwardCard from "./AwardCard";
 import Footer from "./Footer";
 import TimeLine from "./TimeLine";
@@ -76,27 +78,29 @@ const Gm = () => {
         letter-spacing: 1px;
         word-spacing: 2px;
     }
-    
-    & button {
+    & button{
     margin-top: 50px;
-      padding: 10px 35px;
-      border-radius: 20px;
-      border: 0;
-      outline: none;
-      font-style: italic;
-      font-weight: 700;
-      font-size: 14px;
-      color: #ffffff;
-      background-color: #ff6000;
-      transition-duration: 0.4s;
     }
-    & button:hover,
-    & button:focus,
-    & button:active:focus {
-      outline: none;
-      color: #ffffff;
-      background-color: #FF7E00;
-    }
+    //& button {
+    //margin-top: 50px;
+    //  padding: 10px 35px;
+    //  border-radius: 20px;
+    //  border: 0;
+    //  outline: none;
+    //  font-style: italic;
+    //  font-weight: 700;
+    //  font-size: 14px;
+    //  color: #ffffff;
+    //  background-color: #ff6000;
+    //  transition-duration: 0.4s;
+    //}
+    //& button:hover,
+    //& button:focus,
+    //& button:active:focus {
+    //  outline: none;
+    //  color: #ffffff;
+    //  background-color: #FF7E00;
+    //}
     
     
     & .icon {
@@ -331,7 +335,11 @@ const Gm = () => {
                                 </Fade>
                                 <div><span className={"icon"}><i className="fab fa-youtube"></i></span></div>
                                 {/*<h5>Event teaser</h5>*/}
-                                <button className="btn btn-default">Join us</button>
+                                <ButtonGroup variant="contained" color="primary" aria-label="large contained primary button group">
+                                    <Button><VideocamIcon/>  Join as a participant</Button>
+                                    <Button><GroupWorkIcon/>  Join the competition</Button>
+
+                                </ButtonGroup>
                             </div>
                         </div>
                     </div>

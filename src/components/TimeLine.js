@@ -8,6 +8,7 @@ import StarIcon from "@material-ui/icons/Star";
 import TimeLineElement from "./TimeLineElement";
 import VideocamIcon from '@material-ui/icons/Videocam';
 import GroupWorkIcon from '@material-ui/icons/GroupWork';
+
 const TimeLine = () => {
     const program = [
         {
