@@ -6,20 +6,18 @@ import Fade from 'react-reveal/Fade';
 import banner2 from "../pictures/banner1.webp"
 import Jump from "react-reveal/Jump";
 import CountDown from "./CountDown"
-import {VerticalTimeline, VerticalTimelineElement} from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import WorkIcon from '@material-ui/icons/Work';
-import SchoolIcon from '@material-ui/icons/School';
-import StarIcon from '@material-ui/icons/Star';
-import FreeBreakfastIcon from '@material-ui/icons/FreeBreakfast';
-import MusicNoteIcon from '@material-ui/icons/MusicNote';
 
+import 'react-vertical-timeline-component/style.min.css';
+
+import background from "../pictures/background.jpg"
+import awardBackground from "../pictures/award-backgroundjpg.jpg"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import ConferencesCarousel from "./ConferencesCarousel";
 
 import AwardCard from "./AwardCard";
 import Footer from "./Footer";
+import TimeLine from "./TimeLine";
 
 
 const Gm = () => {
@@ -125,11 +123,11 @@ const Gm = () => {
     @media(max-width: 750px){
        & h1{ 
         margin-top:60px;
-        font-size: 25px;
+        font-size: 20px;
         
     }
     & h3{
-      font-size: 18px;
+      font-size: 13px;
     }
     }
   `;
@@ -167,13 +165,24 @@ const Gm = () => {
 //
 //      `;
     const aboutStyle = css`
-    & h2{
+    & .about-title{
         display: inline-block;
         font-size: 4rem;
         font-weight: bold;
         text-transform: uppercase!important;
         color: #000;
         margin-top: 30px;
+        
+    }
+    & .partner-section{
+    margin-bottom: 30px;
+    }
+    & .partner-text{
+        display: inline-block;
+        font-size: 2.25rem;
+        font-weight: bold;
+        text-transform: uppercase!important;
+        color: #000;
         
     }
     & p{
@@ -185,7 +194,8 @@ const Gm = () => {
     }
     & img{
       object-fit: cover;
-      height: 330px;
+     -webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+      filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
     }
     @media(max-width: 760px){
     & h2{
@@ -204,7 +214,8 @@ const Gm = () => {
         align-items: center;
         justify-content: space-around;
         height: 150px;
-        background-image: url("https://preview.colorlib.com/theme/confe/images/img_2.jpg");
+        //background-image: url("https://preview.colorlib.com/theme/confe/images/img_2.jpg");
+        background-image: url(${background});
         background-size: cover;
         background-attachment: fixed;
         //margin-bottom: 10%;
@@ -245,9 +256,9 @@ const Gm = () => {
         //align-items: center;
         //justify-content: space-around;
         //height: 150px;
-        background-image: url("https://preview.colorlib.com/theme/confe/images/img_2.jpg");
+        background-image: url(${awardBackground});
         background-size: cover;
-        background-attachment: fixed;
+        //background-attachment: fixed;
         //margin-bottom: 10%;
         position: relative;
     
@@ -312,11 +323,11 @@ const Gm = () => {
                                 <Jump forever duration={1500}>
                                     <h1>PES Tunisia General Meeting</h1>
                                 </Jump>
-                                <Fade bottom>
+                                <Fade bottom delay={2000}>
                                     <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, iusto?</h3>
                                 </Fade>
-                                <Fade bottom>
-                                    <CountDown timeTillDate="12 07 2020, 6:00 am" timeFormat="MM DD YYYY, h:mm a"/>
+                                <Fade bottom delay={2000}>
+                                    <CountDown timeTillDate="12 05 2020, 6:00 am" timeFormat="MM DD YYYY, h:mm a"/>
                                 </Fade>
                                 <div><span className={"icon"}><i className="fab fa-youtube"></i></span></div>
                                 {/*<h5>Event teaser</h5>*/}
@@ -329,11 +340,11 @@ const Gm = () => {
 
             </div>
             <div style={{'background-color': '#e3e3e3'}}>
-                <div className="container " css={aboutStyle}>
+                <div className="container " id={"about"} css={aboutStyle}>
                     <div className="row  ">
                         <div className="col-12 col-md-7 mx-auto text-left ">
-                            <Fade left>
-                                <h2 className="mb-5">
+                            <Fade left distance={"10%"}>
+                                <h2 className="about-title mb-5">
                                     About the conference
                                 </h2>
                             </Fade>
@@ -346,7 +357,7 @@ const Gm = () => {
                     </div>
                     <div className="row justify-content-center">
                         <div className="col-md-7 col-8 ">
-                            <Fade right>
+                            <Fade right distance={"20%"}>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum hic nam sequi sit
                                     ut!
@@ -369,12 +380,41 @@ const Gm = () => {
                         </div>
 
                     </div>
+                    <div className="row partner-section  ">
+                        <div className="col-12 col-md-7 mx-auto  text-left ">
+                            <div className="row">
+                                <div className="col-12 col-md-6">
+                                    <Fade left distance={"10%"}>
+                                        <h2 className=" partner-text">
+                                            We Work With the <br/>
+                                            Best Partners
+                                        </h2>
+                                    </Fade>
+
+                                </div>
+                                <Fade right distance={"10%"}>
+                                    <div className="col-6 col-md-3">
+                                        <img
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/1022px-Orange_logo.svg.png"
+                                            alt="" width={"125"}/>
+                                    </div>
+                                    <div className="col-6 col-md-3">
+                                        <img
+                                            src="https://scontent.ftun1-1.fna.fbcdn.net/v/t1.15752-9/121963700_810003693161283_1780937212263407769_n.png?_nc_cat=104&ccb=2&_nc_sid=ae9488&_nc_ohc=NG0gp0EC4o8AX-XgdBV&_nc_ht=scontent.ftun1-1.fna&oh=ca21888771300bfb6a62760c59e12179&oe=5FE25095"
+                                            alt="" width={"125"}/>
+                                    </div>
+                                </Fade>
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
-                <div css={programStyle}>
+                <div css={programStyle} id={"program"}>
                     <div className="overlay"></div>
                     <h3 className="text-center">Our program</h3>
                 </div>
-                <div className="container">
+                <div className="container"  >
                     <div className="row">
                         <div className="col-12">
                             {/*<div className="text-center">*/}
@@ -382,112 +422,7 @@ const Gm = () => {
                             {/*    <h3 className="text-center  section-title" css={titleStyle}><span*/}
                             {/*        style={{color: "#2e911f"}}>Event</span> program</h3>*/}
                             {/*</div>*/}
-                            <VerticalTimeline>
-                                <VerticalTimelineElement
-                                    className="vertical-timeline-element--work"
-                                    // contentStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
-                                    // contentArrowStyle={{borderRight: '7px solid  rgb(33, 150, 243)'}}
-                                    date="14h - 14h30"
-                                    iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
-                                    icon={<FreeBreakfastIcon/>}
-                                >
-                                    <h3 className="vertical-timeline-element-title">Opening Ceremony </h3>
-                                    <h4 className="vertical-timeline-element-subtitle">(announcement of
-                                        competition)</h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, fuga?
-                                    </p>
-                                </VerticalTimelineElement>
-                                <VerticalTimelineElement
-                                    className="vertical-timeline-element--work"
-                                    date="14h30 - 16h 00"
-                                    iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
-                                    icon={<WorkIcon/>}
-                                >
-                                    <h3 className="vertical-timeline-element-title">Conference 1</h3>
-                                    <h4 className="vertical-timeline-element-subtitle">Energy transition in Tunisia,
-                                        Social
-                                        Dimensions of energy transition and Contribution
-                                        of IEEE PES in promoting Energy Transition</h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse et magnam
-                                        natus placeat? Ad aliquid amet asperiores assumenda consequuntur cupiditate
-                                        dolores esse eum, exercitationem hic id ipsum labore maiores modi officiis
-                                        perferendis perspiciatis qui quia quidem quo veritatis vero vitae voluptatem?
-                                        Accusamus aliquid earum error eveniet nihil ullam veniam?
-                                    </p>
-                                </VerticalTimelineElement>
-                                <VerticalTimelineElement
-                                    className="vertical-timeline-element--work"
-                                    date="16h 00 - 16h15 "
-                                    iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
-                                    icon={<MusicNoteIcon/>}
-                                >
-                                    <h3 className="vertical-timeline-element-title">Musical Break</h3>
-                                    <h4 className="vertical-timeline-element-subtitle">Lorem ipsum dolor.</h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid atque eum
-                                        fugiat impedit sapiente tempore tenetur voluptatum! Dolore, ipsum, sed!
-                                    </p>
-                                </VerticalTimelineElement>
-                                <VerticalTimelineElement
-                                    className="vertical-timeline-element--work"
-                                    date="2008 - 2010"
-                                    iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
-                                    icon={<WorkIcon/>}
-                                >
-                                    <h3 className="vertical-timeline-element-title">Web Designer</h3>
-                                    <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
-                                    <p>
-                                        User Experience, Visual Design
-                                    </p>
-                                </VerticalTimelineElement>
-
-                                <VerticalTimelineElement
-                                    className="vertical-timeline-element--education"
-                                    date="April 2013"
-                                    iconStyle={{background: 'rgb(233, 30, 99)', color: '#fff'}}
-                                    icon={<SchoolIcon/>}
-                                >
-                                    <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile
-                                        and Social
-                                        Media</h3>
-                                    <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
-                                    <p>
-                                        Strategy, Social Media
-                                    </p>
-                                </VerticalTimelineElement>
-                                <VerticalTimelineElement
-                                    className="vertical-timeline-element--education"
-                                    date="November 2012"
-                                    iconStyle={{background: 'rgb(233, 30, 99)', color: '#fff'}}
-                                    icon={<SchoolIcon/>}
-                                >
-                                    <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
-                                    <h4 className="vertical-timeline-element-subtitle">Certification</h4>
-                                    <p>
-                                        Creative Direction, User Experience, Visual Design
-                                    </p>
-                                </VerticalTimelineElement>
-                                <VerticalTimelineElement
-                                    className="vertical-timeline-element--education"
-                                    date="2002 - 2006"
-                                    iconStyle={{background: 'rgb(233, 30, 99)', color: '#fff'}}
-                                    icon={<SchoolIcon/>}
-                                >
-                                    <h3 className="vertical-timeline-element-title">Bachelor of Science in Interactive
-                                        Digital Media
-                                        Visual Imaging</h3>
-                                    <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
-                                    <p>
-                                        Creative Direction, Visual Design
-                                    </p>
-                                </VerticalTimelineElement>
-                                <VerticalTimelineElement
-                                    iconStyle={{background: 'rgb(16, 204, 82)', color: '#fff'}}
-                                    icon={<StarIcon/>}
-                                />
-                            </VerticalTimeline>
+                            <TimeLine/>
 
                         </div>
                     </div>
@@ -496,7 +431,7 @@ const Gm = () => {
                     <div className="overlay"></div>
                     <h3 className="text-center">Our conferences and trainers</h3>
                 </div>
-                <div className="container" style={{marginBottom:'50px'}}>
+                <div className="container-fluid"  id={"speaker"} style={{marginBottom: '50px'}}>
                     <div className="row">
                         <div className="col-12">
 
@@ -505,16 +440,17 @@ const Gm = () => {
                     </div>
                 </div>
                 <div css={awardStyle}>
-                    <div className="container">
+                    <div className="container" id={"award"}>
                         <div className="row">
                             <div className="col-12">
                                 <h3 className="text-center">Competetion and award</h3>
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-12 d-flex justify-content-center" style={{marginBottom:"150px"}}>
-
-                               <AwardCard/>
+                            <div className="col-12 d-flex justify-content-center w-100"  style={{marginBottom: "150px"}}>
+                                <Fade bottom>
+                                    <AwardCard/>
+                                </Fade>
                             </div>
                         </div>
                     </div>
