@@ -14,7 +14,7 @@ const Footer = () => {
                             <img className="logo-footer " src={logo} alt="logo-footer"
                                  data-at2x="assets/img/logo.png" width={'140'} height={"80"}
                                  css={css`object-fit: contain;margin-left: -25px;`}/>
-                            <h3>
+                            <h3 style={{color:"whitesmoke"}}>
                                 IEEE PES INSAT SB
                             </h3>
                             <p>
