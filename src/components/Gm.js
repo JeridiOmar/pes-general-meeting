@@ -199,7 +199,7 @@ const Gm = () => {
     }
     @media(max-width: 760px){
     & h2{
-      font-size: 2.5rem
+      font-size: 2.5rem !important;
     }
     }
     // @media(max-width: 700px){
