@@ -19,7 +19,7 @@ const ConferencesCarousel = () => {
         {
             name: "Mkawar Mahdi",
             intro: "we are so glad to present our TRAINER MAHDI MKAOUAR.  He will lead the PROJECT MANAGEMENT training session in our IEEE PES TUNISIA GENERAL MEETING! ",
-            description: "expert chez Ecole Nationale d'Ingénieurs de Sfax (ENIS) * Ingenieur formateur ayant 5 ans d'experience significtive auprès des entreprises en santé securité au travail , analyse et prévention des risques professionnels ,hygiène,lutte contre les insendies ,securité des établissements,risques psychosociaux, premiers secours en milieu de travail , développement de compétences personnelles :communication efficace,travail en équipe et coopération ,adaptabilité et flexibilité , gestion du temps, gestion de stress",
+            description: "Project management trainer * Expert teacher in QHSE management * Skills development coach * Director of PSI consulting ",
             picture: mahdiMkawar,
             conference: "project management training session",
             fb: "https://www.facebook.com/events/414412376606526/?post_id=416187366429027&view=permalink&__cft__[0]=AZWWvMcS0gVE77jeQOp60u0kv4ZMNJWZVgm5YR7GUFuJ1hbzGHAqYCTiDroNUP_rM8nq2SyOWt0gZrU2vojyq6r_fWvJ9PnsovyfLMKd5Y-cgWDcwcHs-zpaqZAyVarFQspAvTgpmD8tMSMtFpx1ZO2-&__tn__=%2CO%2CP-R",

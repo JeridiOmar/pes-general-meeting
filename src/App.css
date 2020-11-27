@@ -9,6 +9,9 @@ footer {
     /*background: linear-gradient(0deg, rgba(32,37,31,1) 1%, rgba(59,109,50,1) 13%, rgba(255,255,255,1) 61%);*/
     /*background-color: #538d22;*/
     background-image: url("pictures/footer-background-img.webp");
+    z-index: 5;
+    position: relative;
+    margin-top: -50px;
     /*clip-path: polygon(49% 0, 100% 19%, 100% 60%, 100% 100%, 0 100%, 0% 60%, 0 25%);*/
     /*margin-top: 50px;*/
 }

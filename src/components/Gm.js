@@ -347,7 +347,8 @@ const Gm = () => {
                 </div>
 
             </div>
-            <div style={{'background-color': '#e3e3e3'}}>
+            <div style={{'backgroundColor': '#e3e3e3',"z-index": "1",
+                'position': 'relative'}}>
                 <div className="container " id={"about"} css={aboutStyle}>
                     <div className="row  ">
                         <div className="col-12 col-md-7 mx-auto text-left ">

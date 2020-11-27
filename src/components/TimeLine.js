@@ -1,7 +1,7 @@
 import React from 'react';
 import {VerticalTimeline, VerticalTimelineElement} from "react-vertical-timeline-component";
 import FreeBreakfastIcon from "@material-ui/icons/FreeBreakfast";
-import WorkIcon from "@material-ui/icons/Work";
+// import WorkIcon from "@material-ui/icons/Work";
 import MusicNoteIcon from "@material-ui/icons/MusicNote";
 import SchoolIcon from "@material-ui/icons/School";
 import StarIcon from "@material-ui/icons/Star";
@@ -64,6 +64,17 @@ const TimeLine = () => {
             textColor: "#212529"
         },
         {
+            title: "Workshop 3 : technical skills ",
+            subtitle: "(energy transition)",
+            date: "18h15 - 20h00 ",
+            icon: <SchoolIcon/>,
+            color: "rgb(233, 30, 99)",
+            background: 'rgb(233, 30, 99)',
+            textColor: "#fff",
+            key: 13
+
+        },
+        {
             title: "IEEE PES TUNISIA SECTION ASSEMBLY",
             subtitle: "",
             date: "20h00-22h00",
@@ -79,7 +90,7 @@ const TimeLine = () => {
             subtitle: "",
             date: "",
             icon: <StarIcon/>,
-            color: "rgb(33, 150, 243)",
+            color: "rgb(16, 204, 82)",
             key: 7,
             background: '#fff',
             textColor: "#212529"
@@ -118,7 +129,7 @@ const TimeLine = () => {
         {
             title: "Projects presentation and evaluation by the jury",
             subtitle: "",
-            date: "14H30-15H15",
+            date: "14H30-16H00",
             icon: <VideocamIcon/>,
             color: "rgb(33, 150, 243)",
             key: 11,
@@ -128,7 +139,7 @@ const TimeLine = () => {
         {
             title: "Closing ceremony ",
             subtitle: "(results announcment, Awards...)",
-            date: "15H20-16H00",
+            date: "16H00-17H00",
             icon: <VideocamIcon/>,
             color: "rgb(16, 204, 82)",
             background: 'rgb(16, 204, 82)',
