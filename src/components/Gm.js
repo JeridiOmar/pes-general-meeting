@@ -9,8 +9,8 @@ import CountDown from "./CountDown"
 
 import 'react-vertical-timeline-component/style.min.css';
 
-import background from "../pictures/background.jpg"
-import awardBackground from "../pictures/award-backgroundjpg.jpg"
+import background from "../pictures/background.webp"
+import awardBackground from "../pictures/award-backgroundjpg.webp"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
@@ -20,9 +20,12 @@ import GroupWorkIcon from '@material-ui/icons/GroupWork';
 import AwardCard from "./AwardCard";
 import Footer from "./Footer";
 import TimeLine from "./TimeLine";
-
+import TeaserModel from "./TeaserModel";
+import {makeStyles} from '@material-ui/core/styles';
+import Modal from '@material-ui/core/Modal';
 
 const Gm = () => {
+
     const bannerStyle = css`
     &{
         background-image: url(${banner2});
@@ -313,6 +316,41 @@ const Gm = () => {
   }
 }
   `;
+    function getModalStyle() {
+
+        return {
+            top: `50%`,
+            left: `50%`,
+            transform: `translate(-50%, -50%)`,
+        };
+    }
+
+    const useStyles = makeStyles((theme) => ({
+        paper: {
+            position: 'absolute',
+            width: " 75%",
+            height: "calc((70vw * 9) / 16)",
+            [theme.breakpoints.down('sm')]: {
+                width: "92%",
+                height: "calc((92vw * 9) / 16)"
+            }
+
+            // // backgroundColor: theme.palette.background.paper,
+            // // border: '2px solid #000',
+            // // boxShadow: theme.shadows[5],
+            // padding: theme.spacing(2, 4, 3),
+        },
+    }));
+    const classes = useStyles();
+    // getModalStyle is not a pure function, we roll the style only on the first render
+    const [modalStyle] = React.useState(getModalStyle);
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => {
+        setOpen(true);
+    };
+    const handleClose = () => {
+        setOpen(false);
+    };
     /** @jsxImportSource @emotion/react */
 
     return (
@@ -325,7 +363,7 @@ const Gm = () => {
                         <div className="row">
                             <div className="col-12 text-center">
                                 <Jump forever duration={1500}>
-                                    <h1>PES Tunisia General Meeting</h1>
+                                    <h1 id={"banner-title"}>PES Tunisia General Meeting</h1>
                                 </Jump>
                                 <Fade bottom delay={2000}>
                                     <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, iusto?</h3>
@@ -333,13 +371,30 @@ const Gm = () => {
                                 <Fade bottom delay={2000}>
                                     <CountDown timeTillDate="12 05 2020, 6:00 am" timeFormat="MM DD YYYY, h:mm a"/>
                                 </Fade>
-                                <div><span className={"icon"}><i className="fab fa-youtube"></i></span></div>
+                                <div onClick={() => setOpen(true)}><span className={"icon"}><i className="fab fa-youtube"></i></span></div>
                                 {/*<h5>Event teaser</h5>*/}
                                 <ButtonGroup variant="contained" color="primary" aria-label="large contained primary button group">
                                     <Button><VideocamIcon/>  Join as a participant</Button>
                                     <Button><GroupWorkIcon/>  Join the competition</Button>
 
                                 </ButtonGroup>
+                                <Modal
+                                    open={open}
+                                    onClose={handleClose}
+                                    aria-labelledby="simple-modal-title"
+                                    aria-describedby="simple-modal-description"
+                                >
+                                    <div style={modalStyle} className={classes.paper}>
+                                        {/*<iframe style={{width: "100%", height: "100%"}} src="https://www.youtube.com/embed/MGzmtWi4Oq0"*/}
+                                        {/*        frameBorder="0"*/}
+                                        {/*        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"*/}
+                                        {/*        allowFullScreen></iframe>*/}
+                                        <iframe  style={{width: "100%", height: "100%"}} src="https://www.youtube.com/embed/RNMdLUUN_dM"
+                                                frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen></iframe>
+                                    </div>
+                                </Modal>
                             </div>
                         </div>
                     </div>
@@ -419,12 +474,12 @@ const Gm = () => {
 
                     </div>
                 </div>
-                <div css={programStyle} id={"program"}>
+                <div css={programStyle}>
                     <div className="overlay"></div>
                     <h3 className="text-center">Our program</h3>
                 </div>
-                <div className="container"  >
-                    <div className="row">
+                <div className="container"   >
+                    <div className="row" id={"program"}>
                         <div className="col-12">
                             {/*<div className="text-center">*/}
                             {/*    /!*<img src={logo} alt="" width={"120px"} height={"60px"} className={"facts-logo text-center"}/>*!/*/}
@@ -440,8 +495,8 @@ const Gm = () => {
                     <div className="overlay"></div>
                     <h3 className="text-center">Our conferences and trainers</h3>
                 </div>
-                <div className="container-fluid"  id={"speaker"} style={{marginBottom: '50px'}}>
-                    <div className="row">
+                <div className="container-fluid"   style={{marginBottom: '50px'}}>
+                    <div className="row" id={"speaker"}>
                         <div className="col-12">
 
                             <ConferencesCarousel/>
@@ -449,17 +504,18 @@ const Gm = () => {
                     </div>
                 </div>
                 <div css={awardStyle}>
-                    <div className="container" id={"award"}>
+                    <div className="container" >
                         <div className="row">
                             <div className="col-12">
                                 <h3 className="text-center">Competetion and award</h3>
                             </div>
                         </div>
-                        <div className="row">
+                        <div className="row " id="award" >
                             <div className="col-12 d-flex justify-content-center w-100"  style={{marginBottom: "150px"}}>
                                 <Fade bottom>
                                     <AwardCard/>
                                 </Fade>
+
                             </div>
                         </div>
                     </div>

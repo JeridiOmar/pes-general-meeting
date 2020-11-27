@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../pictures/logo-white.png";
+import logo from "../pictures/logo-white.webp";
 
 import {css} from '@emotion/react'
 import "../App.css"

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {css} from '@emotion/react'
-import logoPes from '../pictures/LogoGM.png'
+import logoPes from '../pictures/LogoGM.webp'
 
 
 import Navbar from 'react-bootstrap/Navbar'
@@ -21,7 +21,11 @@ const NavbarPES = () => {
 //          `;
     //managing change color when scrolled
     useEffect(() => {
-
+        let underlineMenuItems = document.querySelectorAll(".nav-link");
+        underlineMenuItems[0].classList.add("active");
+        underlineMenuItems.forEach((item)=>{
+            item.classList.remove("active");
+        });
          document.addEventListener('scroll', e => {
 
             let scrolled = document.scrollingElement.scrollTop;
@@ -90,8 +94,8 @@ const NavbarPES = () => {
                           }
                           `}>
                         {/*<Nav.Link  eventKey="1" > <i className="fas fa-home"css={menuIcon}></i>Home</Nav.Link>*/}
-                        <Nav.Link  eventKey="2" onSelect={()=>document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}> <i className="far fa-address-card" css={menuIcon}></i>About</Nav.Link>
-                        <Nav.Link  eventKey="3"onSelect={()=>document.getElementById('program').scrollIntoView({ behavior: 'smooth' })}><i className="far fa-calendar-alt" css={menuIcon}></i> Program</Nav.Link>
+                        <Nav.Link  eventKey="2" onSelect={()=>document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}><i className="far fa-address-card" css={menuIcon}></i>About</Nav.Link>
+                        <Nav.Link  eventKey="3"onSelect={()=>document.getElementById('program').scrollIntoView({ behavior: 'smooth' })}><i className="far fa-calendar-alt" css={menuIcon}></i>Program</Nav.Link>
                         <Nav.Link  eventKey="4" onSelect={()=>document.getElementById('speaker').scrollIntoView({ behavior: 'smooth' })}><i className="far fa-id-card" css={menuIcon}></i>Speakers</Nav.Link>
                         <Nav.Link  eventKey="5" onSelect={()=>document.getElementById('award').scrollIntoView({ behavior: 'smooth' })}><i className="fas fa-award" css={menuIcon}></i>Competition</Nav.Link>
 
