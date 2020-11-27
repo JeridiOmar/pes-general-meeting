@@ -176,7 +176,18 @@ footer p {
     bottom: 17%;
     left: calc(9% );
 }
-
+@media(max-width: 768px){
+    .pes-nav .active::after,.pes-nav .nav-link:hover::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: calc(13%);
+        height: 3px;
+        background: #859dc7;
+        bottom: 17%;
+        left: calc(0% );
+    }
+}
 .aboutText {
     font-size: 14px;
 }
