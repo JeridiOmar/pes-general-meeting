@@ -23,7 +23,8 @@ const TimeLine = () => {
         },
         {
             title: "Conference 1 ",
-            subtitle: "(Energy transition in Tunisia, Social of IEEE PES in promoting Energy Transition)",
+            subtitle: "(Energy transition in Tunisia: state role and opportunities \n, the contribution of IEEE PES to promote Energy Transition worldwide.\n" +
+                ", adapting the climate change effects)",
             date: "14h30 - 16h 00",
             icon: <VideocamIcon/>,
             color: "rgb(33, 150, 243)",
@@ -33,7 +34,7 @@ const TimeLine = () => {
         },
         {
             title: "Musical Break",
-            subtitle: "(with lalalal)",
+            subtitle: "",
             date: "16h 00 - 16h15",
             icon: <MusicNoteIcon/>,
             color: "rgb(16, 204, 82)",
@@ -43,7 +44,7 @@ const TimeLine = () => {
 
         },
         {
-            title: "Workshop1:project managementBMC",
+            title: "Workshop 1: Project management BMC",
             subtitle: "Workshop2: design thinking",
             date: "16h15 - 18h00 ",
             icon: <SchoolIcon/>,
@@ -64,8 +65,8 @@ const TimeLine = () => {
             textColor: "#212529"
         },
         {
-            title: "Workshop 3 : technical skills ",
-            subtitle: "(energy transition)",
+            title: "Workshop 3 : Photovoltaic solar energy  ",
+            subtitle: "",
             date: "18h15 - 20h00 ",
             icon: <SchoolIcon/>,
             color: "rgb(233, 30, 99)",
@@ -75,7 +76,7 @@ const TimeLine = () => {
 
         },
         {
-            title: "IEEE PES TUNISIA SECTION ASSEMBLY",
+            title: "IEEE PES Tunisia section assembly",
             subtitle: "",
             date: "20h00-22h00",
             icon: <VideocamIcon/>,
@@ -107,7 +108,7 @@ const TimeLine = () => {
 
         },
         {
-            title: "Conference2: Distinguished Lecturer",
+            title: "Conference 2: Switching to Energy 4.0 :effects on the oil and gas sector ",
             subtitle: "",
             date: "11H45-13H00",
             icon: <VideocamIcon/>,
@@ -117,9 +118,9 @@ const TimeLine = () => {
             textColor: "#212529"
         },
         {
-            title: "Team work : the teams will prepare their final presentation for submission",
+            title: "Submission of the projects",
             subtitle: "",
-            date: "13H00-14H30",
+            date: "13H00 ",
             icon: <GroupWorkIcon/>,
             color: "rgb(33, 150, 243)",
             key: 10,
@@ -127,9 +128,9 @@ const TimeLine = () => {
             textColor: "#212529"
         },
         {
-            title: "Projects presentation and evaluation by the jury",
+            title: "Evaluation of the projects by the jury ",
             subtitle: "",
-            date: "14H30-16H00",
+            date: "14H00-16H00",
             icon: <VideocamIcon/>,
             color: "rgb(33, 150, 243)",
             key: 11,

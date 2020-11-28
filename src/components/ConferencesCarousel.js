@@ -39,7 +39,8 @@ const ConferencesCarousel = () => {
         },
         {
             name: "Marzoug Mongi ",
-            intro: "He was known as the TUNISIAN MINISTER OF ENERGY. Mr Marzoug is going to present the role of Tunisian state in the field of energy transition and the opportunities offered.  ",
+            intro: "Mr Mongi Marzoug is the former minister of Energy, Mines and Energy Transition in Tunisia.\n" +
+                "He will present a conference entitled '' Energy Transition in Tunisia : state role and opportunities'' ",
             description: "Former Minister of Energy, Mines and Energy Transition at Republic of Tunisia * Former Energy,Mines and Energy transition minister (february to september 2020) * Former energy and mines minister (january to august 2016) * Former ICT minister (2011 to 2014) * Senior VP internet and sustainable energy governance (october 2016to february 2020)",
             picture: mongiMarzoug,
             conference: "Conference",
@@ -49,7 +50,7 @@ const ConferencesCarousel = () => {
         },
         {
             name: "Frank lambert ",
-            intro: " IEEE POWER AND ENERGY SOCIETY PRESIDENT will be present as a speaker in our IEEE PES TUNISIA GENERAL MEETING!!  It will be a unique opportunity to meet him and to know more about the energy transition world. ",
+            intro: " IEEE POWER AND ENERGY SOCIETY PRESIDENT will be present as a speaker in our IEEE PES TUNISIA GENERAL MEETING!!  It will be a unique opportunity to meet him and to know more about the energy transition worldwide. ",
             description: "Principal Research Engineer * IEEE power and energy society president",
             picture: frankLambert,
             conference:"Conference",
@@ -60,7 +61,8 @@ const ConferencesCarousel = () => {
 
         {
             name: "Hamzaoui wissem ",
-            intro: "Let's meet Mr. WISSEM HAMZAOUI our next former! He will lead the SOFT SKILLS Training Session! DON'T MISS THIS CHANCE!  ",
+            intro: "Mr Wissem Hamzaoui is goning to lead the Pitching training session.\n" +
+                "This workshop is going to develop your skills in public speaking. ",
             description: "Engineer student in topography * T.S in civil engineering * Soft skills trainer at lo Coach * M.T at JCI Tunisia * Previously founder and B.E of university associations and clubs * Trainer advisor at CONECT",
             picture: wissemHamzaoui,
             conference:"Soft skills workshop",

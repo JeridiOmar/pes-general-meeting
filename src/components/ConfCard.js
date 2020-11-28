@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         maxWidth: 520,
         [theme.breakpoints.down('sm')]: {
-            maxWidth: 250,
+            maxWidth: 270,
         }
     },
     media: {

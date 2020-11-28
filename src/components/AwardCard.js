@@ -17,6 +17,7 @@ import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import GetAppIcon from '@material-ui/icons/GetApp';
 import Collapse from "@material-ui/core/Collapse";
+
 const useStyles = makeStyles((theme) => ({
     root: {
         maxWidth: 750,
@@ -38,11 +39,11 @@ const useStyles = makeStyles((theme) => ({
     avatar: {
         backgroundColor: red[500],
     },
-    button:{
-        marginTop:20
+    button: {
+        marginTop: 20
     },
-    icon:{
-        margin:5
+    icon: {
+        margin: 5
     }
 }));
 
@@ -77,7 +78,9 @@ const AwardCard = () => {
             />
             <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
-                     More information about the competition will be divulgated soon
+                    More information about the competition will be divulgated soon Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit. Beatae distinctio ea explicabo harum illum impedit quasi repellendus
+                    sed. Aperiam blanditiis earum esse ipsa magni nam
                     <Grid
                         container
                         spacing={2}
@@ -92,9 +95,9 @@ const AwardCard = () => {
                               spacing={2}
                               m={2}>
 
-                            <Button  className={classes.button}  m={2} variant="contained" color="primary" disabled>
-                               <GetAppIcon className={classes.icon}/> Download challenge specifications
-                            </Button><Typography>*available on 5 of december</Typography>
+                            <Button className={classes.button} m={2} variant="contained" color="primary" disabled>
+                                <GetAppIcon className={classes.icon}/> Download challenge specifications
+                            </Button><Typography>*available on the 5th of december</Typography>
 
                         </Grid>
                     </Grid>
@@ -123,14 +126,14 @@ const AwardCard = () => {
                 <CardContent>
                     <Typography paragraph>Winners award in partnership with orange:</Typography>
                     <Typography paragraph>
-                        1st place: soon
+                        Huawei Y7p per team member
                     </Typography>
-                    <Typography paragraph>
-                        2nd place: soon
-                    </Typography>
-                    <Typography paragraph>
-                        3rd places : soon
-                    </Typography>
+                    {/*<Typography paragraph>*/}
+                    {/*    2nd place: soon*/}
+                    {/*</Typography>*/}
+                    {/*<Typography paragraph>*/}
+                    {/*    3rd places : soon*/}
+                    {/*</Typography>*/}
 
                 </CardContent>
             </Collapse>

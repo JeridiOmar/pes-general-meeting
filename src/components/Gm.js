@@ -316,6 +316,7 @@ const Gm = () => {
   }
 }
   `;
+
     function getModalStyle() {
 
         return {
@@ -365,17 +366,19 @@ const Gm = () => {
                                 <Jump forever duration={1500}>
                                     <h1 id={"banner-title"}>PES Tunisia General Meeting</h1>
                                 </Jump>
-                                <Fade bottom delay={2000}>
-                                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, iusto?</h3>
+                                <Fade bottom delay={1500}>
+                                    <h3>Various conferences, workshops and training sessions</h3>
                                 </Fade>
-                                <Fade bottom delay={2000}>
+                                <Fade bottom delay={1500}>
                                     <CountDown timeTillDate="12 05 2020, 6:00 am" timeFormat="MM DD YYYY, h:mm a"/>
                                 </Fade>
-                                <div onClick={() => setOpen(true)}><span className={"icon"}><i className="fab fa-youtube"></i></span></div>
+                                <div onClick={() => setOpen(true)}><span className={"icon"}><i
+                                    className="fab fa-youtube"></i></span></div>
                                 {/*<h5>Event teaser</h5>*/}
-                                <ButtonGroup variant="contained" color="primary" aria-label="large contained primary button group">
-                                    <Button><VideocamIcon/>  Join as a participant</Button>
-                                    <Button><GroupWorkIcon/>  Join the competition</Button>
+                                <ButtonGroup variant="contained" color="primary"
+                                             aria-label="large contained primary button group">
+                                    <Button><VideocamIcon/> Join as a participant</Button>
+                                    <Button><GroupWorkIcon/> Join the competition</Button>
 
                                 </ButtonGroup>
                                 <Modal
@@ -389,7 +392,8 @@ const Gm = () => {
                                         {/*        frameBorder="0"*/}
                                         {/*        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"*/}
                                         {/*        allowFullScreen></iframe>*/}
-                                        <iframe  style={{width: "100%", height: "100%"}} src="https://www.youtube.com/embed/RNMdLUUN_dM"
+                                        <iframe style={{width: "100%", height: "100%"}}
+                                                src="https://www.youtube.com/embed/RNMdLUUN_dM"
                                                 frameBorder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen></iframe>
@@ -402,14 +406,16 @@ const Gm = () => {
                 </div>
 
             </div>
-            <div style={{'backgroundColor': '#e3e3e3',"z-index": "1",
-                'position': 'relative'}}>
+            <div style={{
+                'backgroundColor': '#e3e3e3', "z-index": "1",
+                'position': 'relative'
+            }}>
                 <div className="container " id={"about"} css={aboutStyle}>
                     <div className="row  ">
                         <div className="col-12 col-md-7 mx-auto text-left ">
                             <Fade left distance={"10%"}>
                                 <h2 className="about-title mb-5">
-                                    About the conference
+                                    About the congress
                                 </h2>
                             </Fade>
                         </div>
@@ -423,22 +429,19 @@ const Gm = () => {
                         <div className="col-md-7 col-8 ">
                             <Fade right distance={"20%"}>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum hic nam sequi sit
-                                    ut!
-                                    Aut commodi distinctio facere ipsum molestiae mollitia repellendus sit velit
-                                    voluptas.
-                                    Cumque ipsa laborum porro! Alias commodi cum dolores eos facere facilis ipsam
-                                    laboriosam
-                                    laborum laudantium magni, molestias nemo odit pariatur sunt ut voluptates
-                                    voluptatibus
-                                    voluptatum?
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci fugit non optio
-                                    repellat vitae. Commodi illo itaque nulla quasi quidem soluta sunt temporibus
-                                    tenetur
-                                    ullam veritatis! Aliquid commodi odio officiis quaerat quod totam vel voluptate!
-                                    Deleniti eaque ipsa maiores, nam necessitatibus pariatur quae quaerat quibusdam?
-                                    Eveniet
-                                    exercitationem id maiores minima?
+                                    We are so glad to announce the launch of our event 𝐈𝐄𝐄𝐄 𝐏𝐄𝐒 𝐓𝐔𝐍𝐈𝐒𝐈𝐀
+                                    𝐆𝐄𝐍𝐄𝐑𝐀𝐋 𝐌𝐄𝐄𝐓𝐈𝐍𝐆 in his 2nd edition
+                                    The PES TUNISIA GENERAL MEETING is a national scale congress.
+                                    Each year, one of IEEE PES Tunisia's student branch chapters has the honor to
+                                    organize it. We are proud to announce that 𝐈𝐄𝐄𝐄 𝐏𝐄𝐒 𝐈𝐍𝐒𝐀𝐓 𝐒𝐁𝐂 is the
+                                    chosen one this year.
+                                    PES TUNISIA GENERAL MEETING is an opportunity for all IEEE members and non members
+                                    to meet and to better know all about Power and Energy.
+                                    Our event will be held on the 5th and 6th of December and it is themed
+                                    "𝐄𝐍𝐄𝐑𝐆𝐘 𝐓𝐑𝐀𝐍𝐒𝐈𝐓𝐈𝐎𝐍 ". <br/>It is going to be a two-day congress that includes
+                                    various conferences, workshops and training sessions for the teams about the
+                                    technical and soft skills needed for the competition and for all students and
+                                    professionals hwo want yo develop their skills.
                                 </p>
                             </Fade>
                         </div>
@@ -478,7 +481,7 @@ const Gm = () => {
                     <div className="overlay"></div>
                     <h3 className="text-center">Our program</h3>
                 </div>
-                <div className="container"   >
+                <div className="container">
                     <div className="row" id={"program"}>
                         <div className="col-12">
                             {/*<div className="text-center">*/}
@@ -495,7 +498,7 @@ const Gm = () => {
                     <div className="overlay"></div>
                     <h3 className="text-center">Our conferences and trainers</h3>
                 </div>
-                <div className="container-fluid"   style={{marginBottom: '50px'}}>
+                <div className="container-fluid" style={{marginBottom: '50px'}}>
                     <div className="row" id={"speaker"}>
                         <div className="col-12">
 
@@ -504,14 +507,14 @@ const Gm = () => {
                     </div>
                 </div>
                 <div css={awardStyle}>
-                    <div className="container" >
+                    <div className="container">
                         <div className="row">
                             <div className="col-12">
                                 <h3 className="text-center">Competetion and award</h3>
                             </div>
                         </div>
-                        <div className="row " id="award" >
-                            <div className="col-12 d-flex justify-content-center w-100"  style={{marginBottom: "150px"}}>
+                        <div className="row " id="award">
+                            <div className="col-12 d-flex justify-content-center w-100" style={{marginBottom: "150px"}}>
                                 <Fade bottom>
                                     <AwardCard/>
                                 </Fade>
