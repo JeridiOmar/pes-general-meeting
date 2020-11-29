@@ -17,7 +17,7 @@ import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import GetAppIcon from '@material-ui/icons/GetApp';
 import Collapse from "@material-ui/core/Collapse";
-
+import award from "../pictures/award.webp"
 const useStyles = makeStyles((theme) => ({
     root: {
         maxWidth: 750,
@@ -73,7 +73,7 @@ const AwardCard = () => {
             {/*/>*/}
             <CardMedia
                 className={classes.media}
-                image="https://scontent.ftun1-2.fna.fbcdn.net/v/t1.15752-9/128194786_1236890803364833_6761371588705551138_n.jpg?_nc_cat=101&ccb=2&_nc_sid=ae9488&_nc_ohc=YAK_22sw_64AX_3cI74&_nc_ht=scontent.ftun1-2.fna&oh=c9ff582f120b2895357a8946a65c1199&oe=5FE7DDC3"
+                image={award}
                 title="Paella dish"
             />
             <CardContent>
@@ -84,6 +84,7 @@ const AwardCard = () => {
                     The Theme and the specifications will be revealed on the 5th of December and the presentation of the
                     projects will be held on the 6th of December.
                     So Stay Tuned for more details and informations about the 24H challenge.
+                    The 24h competition form has closed
                     <Grid
                         container
                         spacing={2}
