@@ -377,8 +377,8 @@ const Gm = () => {
                                 {/*<h5>Event teaser</h5>*/}
                                 <ButtonGroup variant="contained" color="primary"
                                              aria-label="large contained primary button group">
-                                    <Button><VideocamIcon/> Join as a participant</Button>
-                                    <Button><GroupWorkIcon/> Join the competition</Button>
+                                    <Button onClick={() => window.open("https://hedisinda5.typeform.com/to/zSRMSvKb?fbclid=IwAR3egg_s3oXuMUhuMkzlLq04FfJNYytBtfdPbsbKyf27qtI42k8KP0W1SMU")} ><VideocamIcon/> Join as a participant</Button>
+                                    <Button onClick={() => window.open("https://ayediimen76.typeform.com/to/K0mkvBC5")}><GroupWorkIcon/> Join the competition</Button>
 
                                 </ButtonGroup>
                                 <Modal

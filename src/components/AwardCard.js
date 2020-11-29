@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     },
     media: {
         height: 0,
-        paddingTop: '56.25%', // 16:9
+        paddingTop: '60%', // 16:9
     },
     expand: {
         transform: 'rotate(0deg)',
@@ -73,14 +73,17 @@ const AwardCard = () => {
             {/*/>*/}
             <CardMedia
                 className={classes.media}
-                image="https://scontent.ftun1-1.fna.fbcdn.net/v/t1.0-9/125891022_4674000399339249_520297018756263019_o.jpg?_nc_cat=104&ccb=2&_nc_sid=730e14&_nc_ohc=50v1u2_KpWIAX-Agtem&_nc_ht=scontent.ftun1-1.fna&oh=e9f804f03daeec2f5eccc783923e743c&oe=5FE0F17C"
+                image="https://scontent.ftun1-2.fna.fbcdn.net/v/t1.15752-9/128194786_1236890803364833_6761371588705551138_n.jpg?_nc_cat=101&ccb=2&_nc_sid=ae9488&_nc_ohc=YAK_22sw_64AX_3cI74&_nc_ht=scontent.ftun1-2.fna&oh=c9ff582f120b2895357a8946a65c1199&oe=5FE7DDC3"
                 title="Paella dish"
             />
             <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
-                    More information about the competition will be divulgated soon Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit. Beatae distinctio ea explicabo harum illum impedit quasi repellendus
-                    sed. Aperiam blanditiis earum esse ipsa magni nam
+                    The IEEE PES Tunisia General Meeting 24H challenge brings opportunities for learning, problem
+                    solving, and networking to the forefront as teams develop rapid, innovative solutions to the Energy
+                    problems that our society faces today.
+                    The Theme and the specifications will be revealed on the 5th of December and the presentation of the
+                    projects will be held on the 6th of December.
+                    So Stay Tuned for more details and informations about the 24H challenge.
                     <Grid
                         container
                         spacing={2}

@@ -28,6 +28,12 @@ const useStyles = makeStyles((theme) => ({
         height: 0,
         paddingBottom: '60.25%', // 16:9
     },
+    rootContent:{
+        height:"112px",
+        [theme.breakpoints.down('sm')]: {
+            height:"165px",
+        }
+    },
     expand: {
         transform: 'rotate(0deg)',
         marginLeft: 'auto',
@@ -61,7 +67,7 @@ const ConfCard = ({name,intro,description,picture,conference,fb,li}) => {
                 }
                 action={
                     <IconButton aria-label="settings">
-                        <MoreVertIcon/>
+                        {/*<MoreVertIcon/>*/}
                     </IconButton>
                 }
                 title={name}
@@ -72,7 +78,7 @@ const ConfCard = ({name,intro,description,picture,conference,fb,li}) => {
                 image={picture}
                 title="imageConf"
             />
-            <CardContent>
+            <CardContent className={classes.rootContent}>
                 <Typography variant="body2" color="textSecondary" component="p">
                     {intro}
                 </Typography>
