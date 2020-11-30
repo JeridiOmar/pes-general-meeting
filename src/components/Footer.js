@@ -36,11 +36,11 @@ const Footer = () => {
                             </a>
                             </p>
                             <div>
-                                <a href="https://www.facebook.com/PES.INSAT/"><i className="fab fa-facebook"></i></a>
-                                <a href="https://www.linkedin.com/in/ieee-pes-chapter-insat-sb-92255a1b6/"><i
+                                <a  target="_blank" href="https://www.facebook.com/PES.INSAT/"><i className="fab fa-facebook"></i></a>
+                                <a target="_blank" href="https://www.linkedin.com/in/ieee-pes-chapter-insat-sb-92255a1b6/"><i
                                     className="fab fa-linkedin-in"></i></a>
 
-                                <a href="https://www.instagram.com/ieee.pes.insat/"><i className="fab fa-instagram"></i></a>
+                                <a target="_blank" href="https://www.instagram.com/ieee.pes.insat/"><i className="fab fa-instagram"></i></a>
 
                             </div>
 
