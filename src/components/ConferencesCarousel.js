@@ -12,6 +12,7 @@ import frankLambert from "../pictures/speakers/frank-lambert.webp"
 import walidHassen from "../pictures/speakers/walid-hassen.webp"
 import kamelBennaceur from "../pictures/speakers/kamel-bennaceur.webp"
 import wissemHamzaoui from "../pictures/speakers/wissem-hamzaoui3.webp"
+import ZmerliMohammed from "../pictures/speakers/mohamed-zmerli.webp"
 /** @jsxImportSource @emotion/react */
 
 const ConferencesCarousel = () => {
@@ -89,6 +90,16 @@ const ConferencesCarousel = () => {
             li:"https://www.linkedin.com/in/kamel-bennaceur-09a50a1/",
             fb:"https://www.facebook.com/events/414412376606526/?post_id=422601309120966&view=permalink&__cft__[0]=AZUAzoNz42d2PhoilTT2wJ80y2a1iunk65rE-SA9TE748uvfXK8Uf9A4U3yFc-S8eZdCnZ38M0NG7y4jxRjcuI5iJANb6oxyC06Xy-I7G_iJjwmnjui8PWMIhN8D0iwXZY2ZJi0i7eD3ecDUepkGS5ZM&__tn__=%2CO%2CP-R",
             key: 7
+        },
+        {
+            name: "Zmerli mohammed ",
+            intro: "We are pleased to present to you our 4th Speaker Mr. Mohamed ZMERLI the official representative of Tunisia at the United Nations Framework Convention on Climate Change, ",
+            description: "Graduated from the National agronomic school of Rennes France * Currently national focal point and official representative of Tunisia in the united nations framework convention on climate change * In Tunisia he is the director  of the national coordination unit on climate change,within the ministry of local affairs and environment * Elected member and representative of africa on the board of directors of the adaptation fund ,under the Koyoto protocol ",
+            picture: ZmerliMohammed,
+            conference:"Conference",
+            li:"https://www.linkedin.com/in/mohamed-zmerli-4746a4156",
+            fb:"https://www.facebook.com/events/414412376606526/?post_id=427782581936172&view=permalink&__cft__[0]=AZX8E3P6VZosvU8pqhE5qcyOpvvEWqCxNSsjgjF9qEcrN1IYG0JA1mCAinuFBOLpUMK_M9CHJOUdB0Wg-kx2IVBceYyinUtRPcuwtoEbhTnz5HVLKELRc5UARZ6DQeUy-qjzVKDgVUgUZMuwtr4TMpor&__tn__=%2CO%2CP-R",
+            key: 8
         }
 
     ];
