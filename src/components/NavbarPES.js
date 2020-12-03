@@ -11,7 +11,20 @@ import Container from "react-bootstrap/Container";
 /** @jsxImportSource @emotion/react */
 const NavbarPES = () => {
     const [navState, setNavState] = useState('notScrolled');
+    const [toglleState, setToglleState] = useState('notToggledClick');
+    const [clickCounter,setClickCounter] = useState(0);
+    const toggleClick=()=>{
+        setClickCounter(clickCounter+ 1);
 
+    };
+    useEffect(()=>{
+        if (clickCounter % 2 ===1 && navState ==="notScrolled"){
+            setToglleState("toggledClick");
+
+        }else if(clickCounter % 2 ===0 ){
+            setToglleState("notToggledClick" );
+        }
+    },[clickCounter]);
     const menuIcon = css`margin-right: 4px`;
 //     const navStyle = css`
 //         &.scrolled {
@@ -79,11 +92,11 @@ const NavbarPES = () => {
         //         </div>
         //     </div>
         // </nav>
-        <Navbar collapseOnSelect={true} expand="lg"  fixed="top" className={` pes-nav  ${navState}`}>
+        <Navbar collapseOnSelect={true} expand="lg"  fixed="top" className={` pes-nav  ${navState} ${toglleState}`}>
             <Container>
                 <Navbar.Brand href="#home"><img className={'p-0'} src={logoPes} alt="logo" width={'120'} height={'60'}
                                                 css={css`object-fit: cover;`}/></Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                <Navbar.Toggle onClick={toggleClick} aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto" css={css`
                           & a{

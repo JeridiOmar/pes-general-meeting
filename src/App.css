@@ -126,7 +126,9 @@ footer p {
     transition: all 0.4s !important;
     -webkit-transition: all 0.4s !important;
 }
-
+.toggledClick{
+    background-color: rgba(4, 9, 30, 0.85);
+}
 .scrolled {
     padding: 0 !important;
     padding-left: 8px !important;

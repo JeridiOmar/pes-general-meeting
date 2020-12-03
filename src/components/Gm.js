@@ -23,6 +23,9 @@ import TimeLine from "./TimeLine";
 import TeaserModel from "./TeaserModel";
 import {makeStyles} from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
+import Banner from "./Banner";
+import moment from "moment";
+import BannerLive from "./BannerLive";
 
 const Gm = () => {
 
@@ -70,6 +73,10 @@ const Gm = () => {
     text-transform: uppercase;
     letter-spacing: 1px;
     word-spacing: 2px;
+    }
+    & h1 span {
+    font-size: 5rem;
+    color:#f50057;
     }
     & h3{
     margin-top: 20px;
@@ -135,6 +142,9 @@ const Gm = () => {
     }
     & h3{
       font-size: 13px;
+    }
+    & h1 span {
+    font-size: 2.5rem;
     }
     }
   `;
@@ -317,41 +327,9 @@ const Gm = () => {
 }
   `;
 
-    function getModalStyle() {
+const now=moment();
+const event =moment("12 05 2020, 2:00 pm","MM DD YYYY, h:mm a");
 
-        return {
-            top: `50%`,
-            left: `50%`,
-            transform: `translate(-50%, -50%)`,
-        };
-    }
-
-    const useStyles = makeStyles((theme) => ({
-        paper: {
-            position: 'absolute',
-            width: " 75%",
-            height: "calc((70vw * 9) / 16)",
-            [theme.breakpoints.down('sm')]: {
-                width: "92%",
-                height: "calc((92vw * 9) / 16)"
-            }
-
-            // // backgroundColor: theme.palette.background.paper,
-            // // border: '2px solid #000',
-            // // boxShadow: theme.shadows[5],
-            // padding: theme.spacing(2, 4, 3),
-        },
-    }));
-    const classes = useStyles();
-    // getModalStyle is not a pure function, we roll the style only on the first render
-    const [modalStyle] = React.useState(getModalStyle);
-    const [open, setOpen] = React.useState(false);
-    const handleOpen = () => {
-        setOpen(true);
-    };
-    const handleClose = () => {
-        setOpen(false);
-    };
     /** @jsxImportSource @emotion/react */
 
     return (
@@ -361,46 +339,10 @@ const Gm = () => {
                 <div className="overlay"></div>
                 <div css={headerStyle}>
                     <div className="container">
-                        <div className="row">
-                            <div className="col-12 text-center">
-                                <Jump forever duration={1500}>
-                                    <h1 id={"banner-title"}>PES Tunisia General Meeting</h1>
-                                </Jump>
-                                <Fade bottom delay={1500}>
-                                    <h3>Various conferences, workshops and training sessions</h3>
-                                </Fade>
-                                <Fade bottom delay={1500}>
-                                    <CountDown timeTillDate="12 05 2020, 6:00 am" timeFormat="MM DD YYYY, h:mm a"/>
-                                </Fade>
-                                <div onClick={() => setOpen(true)}><span className={"icon"}><i
-                                    className="fab fa-youtube"></i></span></div>
-                                {/*<h5>Event teaser</h5>*/}
-                                <ButtonGroup variant="contained" color="primary"
-                                             aria-label="large contained primary button group">
-                                    <Button onClick={() => window.open("https://hedisinda5.typeform.com/to/zSRMSvKb?fbclid=IwAR3egg_s3oXuMUhuMkzlLq04FfJNYytBtfdPbsbKyf27qtI42k8KP0W1SMU")} ><VideocamIcon/> Join as a participant</Button>
-                                    <Button onClick={() => window.open("https://ayediimen76.typeform.com/to/K0mkvBC5")}><GroupWorkIcon/> Join the competition</Button>
+                        {now.isBefore(event) ? <Banner/>: <BannerLive/>}
 
-                                </ButtonGroup>
-                                <Modal
-                                    open={open}
-                                    onClose={handleClose}
-                                    aria-labelledby="simple-modal-title"
-                                    aria-describedby="simple-modal-description"
-                                >
-                                    <div style={modalStyle} className={classes.paper}>
-                                        {/*<iframe style={{width: "100%", height: "100%"}} src="https://www.youtube.com/embed/MGzmtWi4Oq0"*/}
-                                        {/*        frameBorder="0"*/}
-                                        {/*        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"*/}
-                                        {/*        allowFullScreen></iframe>*/}
-                                        <iframe style={{width: "100%", height: "100%"}}
-                                                src="https://www.youtube.com/embed/RNMdLUUN_dM"
-                                                frameBorder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                allowFullScreen></iframe>
-                                    </div>
-                                </Modal>
-                            </div>
-                        </div>
+
+
                     </div>
 
                 </div>
@@ -438,7 +380,8 @@ const Gm = () => {
                                     PES TUNISIA GENERAL MEETING is an opportunity for all IEEE members and non members
                                     to meet and to better know all about Power and Energy.
                                     Our event will be held on the 5th and 6th of December and it is themed
-                                    "𝐄𝐍𝐄𝐑𝐆𝐘 𝐓𝐑𝐀𝐍𝐒𝐈𝐓𝐈𝐎𝐍 ". <br/>It is going to be a two-day congress that includes
+                                    "𝐄𝐍𝐄𝐑𝐆𝐘 𝐓𝐑𝐀𝐍𝐒𝐈𝐓𝐈𝐎𝐍 ". <br/>It is going to be a two-day congress that
+                                    includes
                                     various conferences, workshops and training sessions for the teams about the
                                     technical and soft skills needed for the competition and for all students and
                                     professionals hwo want yo develop their skills.
