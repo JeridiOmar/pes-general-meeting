@@ -328,7 +328,7 @@ const Gm = () => {
   `;
 
 const now=moment();
-const event =moment("12 05 2020, 2:00 pm","MM DD YYYY, h:mm a");
+const event =moment("12 05 2020, 01:30 pm","MM DD YYYY, h:mm a");
 
     /** @jsxImportSource @emotion/react */
 
