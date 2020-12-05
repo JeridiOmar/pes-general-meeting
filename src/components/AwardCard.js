@@ -99,7 +99,7 @@ const AwardCard = () => {
                               spacing={2}
                               m={2}>
 
-                            <Button className={classes.button} m={2} variant="contained" color="primary" disabled>
+                            <Button onClick={() => window.open("https://l.facebook.com/l.php?u=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F11fkJYoW5tdEpKYcRabX9mGxQyK-nRWBU%2Fview%3Ffbclid%3DIwAR2GG3Q9STx9PhJ0T6pslmnC-eWitzwxQntK7vMpuMC7-g-hVCziphzvnWg&h=AT0QAdhaZvyFtO1zxuQrZagXHXH-LSzmtzP0aF54cMJbFks9hhD4W5Nw04fCbLb4wBb8vhI38qpV2c-AE4d17CVZoyhJPzO20WmdAHpxNQ45iZXNv7NlFMlEEgrjWd9D4CW6&__tn__=-UK-R&c[0]=AT3LAOE_SYtWq1V_uwEzfHZSInKzm_33xYwyeWr7kFrELpvGaVXeS53som1irXDw1pHGwJtsQj0l3dYJmkKzabVBW0AeVB0q5o8QPAZ78DdA5bwXQL_xKH0xujaQs4PH-CjmFojvyghM_M96rw9cnqmkLl5tQzhUMrdO-Y7GHdtNsVc")} className={classes.button} m={2} variant="contained" color="primary" >
                                 <GetAppIcon className={classes.icon}/> Download challenge specifications
                             </Button><Typography>*available on the 5th of december</Typography>
 
